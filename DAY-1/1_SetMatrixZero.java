@@ -30,10 +30,9 @@ class Solution {
         }
     }
 }
-// better : we can optimise space
-// time : O((N*M)*(N + M)) + O(N*M)
+// better : we can optimise space and time
+// time : O((N*M)) + O(N*M)
 // space : O(m)+O(n)
-time
 
 class Solution {
     public void setZeroes(int[][] matrix) {
@@ -58,16 +57,6 @@ class Solution {
             }
         }
 
-    }
-    public void fillCol(int arr[][], int row, int col){
-        for(int i = 0;i<row;i++){
-            arr[i][col] = 0;
-        }
-    }
-     public void fillRow(int arr[][], int row, int col){
-        for(int i = 0;i<col;i++){
-            arr[row][i] = 0;
-        }
     }
 }
 
