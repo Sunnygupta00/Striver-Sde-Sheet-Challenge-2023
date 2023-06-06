@@ -1,3 +1,5 @@
+// TIME : O(N*M)
+// SPACE : O(1)
 class Solution {
     public List<List<Integer>> generate(int n) {
         List<List<Integer>>ans = new ArrayList<>();
