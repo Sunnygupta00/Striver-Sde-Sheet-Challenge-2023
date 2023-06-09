@@ -25,7 +25,7 @@ class Solution {
        for(int i : nums){
            if(i == element)count++;
        }
-       return count>=count/n ? element : -1;
+       return count>=n/2 ? element : -1;
         
     }
 }
