@@ -14,7 +14,7 @@ class Solution {
             return;
         }
         temp.add(arr[index]);
-        rec(arr, ans, temp, target-arr[index],n, index+1);
+        rec(arr, ans, temp, target-arr[index],n, index);
         temp.remove(temp.size()-1);
         rec(arr, ans, temp, target, n, index+1);
     }
