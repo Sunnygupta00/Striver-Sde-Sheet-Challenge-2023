@@ -1,4 +1,4 @@
-// Simple pick and not pick with little twist
+// Simple pick and not pick with a little twist
 
 class Solution {
     public List<List<Integer>> combinationSum(int[] arr, int target) {
