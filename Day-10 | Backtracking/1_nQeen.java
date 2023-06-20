@@ -1,3 +1,4 @@
+//brute force : i am just trying to place in every row of col
 class Solution {
     public List<List<String>> solveNQueens(int n) {
         char grid[][] = new char[n][n];
@@ -27,16 +28,19 @@ class Solution {
     }
     public boolean isValid(char grid[][], int row, int col,int n){
             int i = row, j = col;
+            // checking left side
             while(j>=0){
                 if(grid[i][j] == 'Q')return false;
                 j--;
             }
             i = row; j = col;
+            // checking upper diagonal
             while(i>=0 && j>=0){
                 if(grid[i][j] == 'Q')return false;
                 i--;
                 j--;
             }
+            // checking lower diagonal
             i = row; j = col;
             while(j>=0 && i<n){
                 if(grid[i][j] == 'Q')return false;
@@ -48,3 +52,4 @@ class Solution {
     }
 }
 
+// optimised : using hashing
