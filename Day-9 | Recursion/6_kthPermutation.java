@@ -27,4 +27,27 @@ class Solution {
         arr[j] = temp;
     }
 }
-// optimal
+// optimal: using basic calculation
+
+class Solution {
+    public String getPermutation(int n, int k) {
+        StringBuilder sb = new StringBuilder();
+        List<Character>arr = new ArrayList<>();
+        int fact = 1;
+        k-=1;
+        for(int i=1;i<n;i++){
+            fact*=i;
+          arr.add((char)(i+'0'));
+        }
+        arr.add((char)(n+'0'));
+        while(true){
+            int index = k/fact; // it will tell us the group
+            sb.append(arr.get(index));
+            arr.remove(index);
+            if(arr.size()==0)break;
+            k = k%fact; // remaning combination
+            fact= fact/arr.size();
+        }
+        return sb.toString();
+    }
+}
